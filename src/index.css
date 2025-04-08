@@ -8,60 +8,14 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Remove all background gradients */
 html {
   scroll-behavior: smooth;
 }
 
-.animated-gradient {
-  /* background: linear-gradient(to left, #160d25 , #1b0f2c, #110c24,#150727, #190a2b,#210f37,#1e1032,  #12092f);
-   */
-  background: linear-gradient(
-    to left,
-    #241438,
-    #01061b,
-    #01051a,
-    #01061a,
-    #01051b,
-    #01051a,
-    #241438
-  );
-  min-height: 100vh;
-}
-
+/* Cleaned up index.css */
 .navbar-transparent {
   background-color: transparent;
-}
-
-.animated-gradient-mobile {
-  background: linear-gradient(
-    to left,
-    #290c2e,
-    #02061b,
-    #01061a,
-    #01051b,
-    #01051a,
-    #290c2e
-  );
-}
-@keyframes scroll {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(-50%);
-  }
-}
-
-.animated-gradient-mobile {
-  background: linear-gradient(
-    to left,
-    #290c2e,
-    #02061b,
-    #01061a,
-    #01051b,
-    #01051a,
-    #290c2e
-  );
 }
 
 .highlight {
@@ -78,60 +32,57 @@ html {
   );
 }
 
-.text-overlay span {
-  background: linear-gradient(
-    to left,
-    #241438,
-    #01061b,
-    #01051a,
-    #01061a,
-    #01051b,
-    #01051a,
-    #201132
-  );
-}
-
 .glow-on-hover:hover {
   filter: drop-shadow(0 0 8px rgba(255, 255, 255, 0.6));
 }
 
 @layer base {
   body {
-    @apply bg-[#01061B] text-white;
-  }
-}
-@keyframes arrowAnimation {
-  0% {
-    transform: translateX(0);
-  }
-  50% {
-    transform: translateY(20px);
-  }
-  100% {
-    transform: translateY(0);
+    @apply text-white; /* Removed background color */
   }
 }
 
-.animated-arrow {
-  animation: arrowAnimation 2s ease-in-out infinite;
-}
-
-.clamp-complete {
-  font-size: clamp(13.5px, 25px); /* Adjust these values to fit your design */
-}
-
+/* Scrollbar styles remain */
 ::-webkit-scrollbar {
-  /* Customize the scrollbar width */
   width: 10px;
 }
 
 ::-webkit-scrollbar-track {
-  /* Customize the scrollbar track */
   background: #01061b;
 }
 
 ::-webkit-scrollbar-thumb {
-  /* Customize the scrollbar thumb */
   background: #7367cd;
   border-radius: 10px;
+}
+
+.rotating-sheets-container canvas {
+  width: 100% !important;
+  left: 0;
+  position: absolute;
+
+}
+
+body, html {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+.geometric-star-container {
+  width: 400px;
+  height: 400px;
+  margin: 20px auto;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 0 20px rgba(0, 255, 200, 0.3);
+}
+
+.green-fountain-container {
+  width: 400px;
+  height: 400px;
+  margin: 20px auto;
+  border-radius: 50%;
+  overflow: hidden;
+  box-shadow: 0 0 30px rgba(0, 255, 150, 0.2);
 }
