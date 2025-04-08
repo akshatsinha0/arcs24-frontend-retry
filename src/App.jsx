@@ -16,6 +16,8 @@ import WhatIsArcs from "./Components/whatisarcs";
 import RotatingSheets from "./Components/RotatingSheets";
 import GeometricStar from "./Components/GeometricStar";
 import GreenFountain from "./Components/GreenFountain";
+import OrbitalCanvas from "./Components/OrbitalCanvas";
+
 
 function App() {
   return (
@@ -53,6 +55,10 @@ function App() {
         <Why />
         <Happie />
         <Faq />
+        <div className="p-8">
+          <OrbitalCanvas />
+        </div>
+        
         {/* <Footer /> */}
       </main>
     </div>
