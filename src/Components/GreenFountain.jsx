@@ -4,7 +4,6 @@ import p5 from 'p5';
 
 const GreenFountain = () => {
   const canvasRef = useRef(null);
-  
   useEffect(() => {
     const sketch = (p) => {
       let points = [];
